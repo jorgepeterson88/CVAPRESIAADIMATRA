@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - CV APRESIA ADIMATRA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-bg: #0a0a0a;
+            --light-text: #ffffff;
+            --gray-text: #b8b8b8;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Page Content */
+        .page-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 3rem;
+            min-height: 100vh;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+
+        .page-section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .page-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--light-text);
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            margin-top: 1.5rem;
+            color: var(--light-text);
+        }
+
+        .page-section p {
+            color: var(--gray-text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .page-section ul {
+            color: var(--gray-text);
+            line-height: 1.8;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--gray-text);
+            font-style: italic;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--gray-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--light-text);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-content {
+                padding: 6rem 1rem 2rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .page-section {
+                padding: 1.5rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+            z-index: 999;
+        }
+
+        .back-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(102, 126, 234, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">CV APRESIA ADIMATRA</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html#services">Layanan</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#about">Tentang</a></li>
+                <li><a href="index.html#contact">Kontak</a></li>
+                <li><a href="privacy.html">Privasi</a></li>
+                <li><a href="terms.html">Syarat & Ketentuan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <h1 class="page-title fade-in">Privacy Policy</h1>
+        
+        <div class="page-section fade-in">
+            <h2>Kebijakan Privasi <span class="highlight">CV APRESIA ADIMATRA</span></h2>
+            <p>
+                Di <span class="highlight">CV APRESIA ADIMATRA</span>, kami sangat memperhatikan privasi dan keamanan data pribadi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, melindungi, dan membagikan informasi pribadi Anda saat menggunakan layanan creative advertising dan digital marketing kami.
+            </p>
+            <p>
+                Dengan menggunakan layanan kami, Anda menyetujui praktik-praktik yang dijelaskan dalam kebijakan ini.
+            </p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>1. Informasi yang Kami Kumpulkan</h2>
+            <h3>Informasi Pribadi</h3>
+            <p>Kami dapat mengumpulkan informasi pribadi berikut:</p>
+            <ul>
+                <li>Nama lengkap dan informasi kontak (email, telepon, alamat)</li>
+                <li>Informasi perusahaan dan jabatan</li>
+                <li>Data proyek dan kebutuhan creative requirements</li>
+                <li>Informasi pembayaran dan faktur</li>
+                <li>Komunikasi dan catatan pertemuan</li>
+            </ul>
+
+            <h3>Informasi Teknis</h3>
+            <p>Kami juga mengumpulkan informasi teknis seperti:</p>
+            <ul>
+                <li>Alamat IP dan data lokasi</li>
+                <li>Informasi browser dan perangkat</li>
+                <li>Data penggunaan website dan portfolio</li>
+                <li>Cookies dan data tracking</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>2. Cara Kami Menggunakan Informasi Anda</h2>
+            <p>Kami menggunakan informasi yang dikumpulkan untuk:</p>
+            <ul>
+                <li><strong>Menyediakan Layanan Creative:</strong> Mengembangkan desain, strategi branding, dan solusi advertising yang disesuaikan dengan kebutuhan Anda.</li>
+                <li><strong>Komunikasi Proyek:</strong> Menghubungi Anda terkait perkembangan proyek, revisi, dan konsultasi kreatif.</li>
+                <li><strong>Penagihan dan Pembayaran:</strong> Mengelola faktur, pembayaran, dan administrasi keuangan.</li>
+                <li><strong>Peningkatan Layanan:</strong> Menganalisis data untuk meningkatkan kualitas layanan creative kami.</li>
+                <li><strong>Marketing:</strong> Mengirim informasi tentang layanan baru, portfolio updates, dan penawaran khusus (dengan persetujuan Anda).</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>3. Berbagi Informasi</h2>
+            <p>Kami tidak menjual, memperdagangkan, atau menyewakan informasi pribadi Anda kepada pihak ketiga. Kami hanya membagikan informasi Anda dalam kondisi berikut:</p>
+            <ul>
+                <li><strong>Partner Kreatif:</strong> Dengan vendor dan partner kreatif terpercaya yang membantu menyelesaikan proyek Anda.</li>
+                <li><strong>Penyedia Layanan:</strong> Dengan penyedia layanan hosting, payment processing, dan teknis lainnya.</li>
+                <li><strong>Kewajiban Hukum:</strong> Jika diwajibkan oleh hukum atau untuk melindungi hak-hak kami.</li>
+                <li><strong>Transfer Bisnis:</strong> Dalam kasus merger, akuisisi, atau penjualan aset perusahaan.</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>4. Keamanan Data</h2>
+            <p>
+                <span class="highlight">CV APRESIA ADIMATRA</span> berkomitmen untuk melindungi keamanan informasi pribadi Anda. Kami menerapkan langkah-langkah keamanan yang wajar termasuk:
+            </p>
+            <ul>
+                <li>Enkripsi data dan transaksi aman</li>
+                <li>Akses terbatas ke informasi pribadi</li>
+                <li>System monitoring dan security audits</li>
+                <li>Training staf tentang privasi data</li>
+                <li>Backup data yang aman dan teratur</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>5. Hak Anda sebagai Pengguna</h2>
+            <p>Anda memiliki hak untuk:</p>
+            <ul>
+                <li><strong>Mengakses Data:</strong> Meminta salinan informasi pribadi yang kami simpan.</li>
+                <li><strong>Koreksi Data:</strong> Memperbarui atau memperbaiki informasi yang tidak akurat.</li>
+                <li><strong>Penghapusan Data:</strong> Meminta penghapusan data pribadi Anda.</li>
+                <li><strong>Menolak Marketing:</strong> Berhenti menerima komunikasi marketing dari kami.</li>
+                <li><strong>Portabilitas Data:</strong> Meminta transfer data ke pihak ketiga.</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>6. Cookies dan Tracking</h2>
+            <p>
+                Website kami menggunakan cookies untuk meningkatkan pengalaman pengguna. Cookies membantu kami menganalisis traffic, mengingat preferensi Anda, dan menyediakan konten yang relevan. Anda dapat mengatur preferensi cookies melalui browser Anda.
+            </p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>7. Kebijakan Retensi</h2>
+            <p>
+                Kami menyimpan informasi pribadi hanya selama diperlukan untuk tujuan yang dijelaskan dalam kebijakan ini, atau sesuai dengan persyaratan hukum yang berlaku. Data proyek dan klien disimpan selama periode kerjasama ditambah 5 tahun untuk keperluan arsip dan referensi.
+            </p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>8. Perubahan Kebijakan</h2>
+            <p>
+                Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan akan diberitahukan melalui website kami atau email. Penggunaan layanan yang berkelanjutan setelah perubahan berarti Anda menyetujui kebijakan yang diperbarui.
+            </p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>9. Kontak Kami</h2>
+            <p>
+                Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau praktik privasi kami, silakan hubungi:
+            </p>
+            <ul>
+                <li><strong>Email:</strong> privacy@apresiaadimatra.co.id</li>
+                <li><strong>Telepon:</strong> +62 21 5555 1234</li>
+                <li><strong>Alamat:</strong> Jl. Kreatif No. 123, Jakarta Selatan 12345</li>
+            </ul>
+        </div>
+
+        <div class="last-updated fade-in">
+            <p>Kebijakan Privasi ini terakhir diperbarui pada: 1 Januari 2024</p>
+        </div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-home">← Kembali ke Beranda</a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#services">Layanan</a>
+                <a href="index.html#portfolio">Portfolio</a>
+                <a href="index.html#about">Tentang</a>
+                <a href="index.html#contact">Kontak</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+            <p>&copy; 2024 CV APRESIA ADIMATRA. All rights reserved. | Creative Advertising Agency</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

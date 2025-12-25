@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - CV APRESIA ADIMATRA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-bg: #0a0a0a;
+            --light-text: #ffffff;
+            --gray-text: #b8b8b8;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Page Content */
+        .page-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 3rem;
+            min-height: 100vh;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+
+        .page-section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .page-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--light-text);
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            margin-top: 1.5rem;
+            color: var(--light-text);
+        }
+
+        .page-section p {
+            color: var(--gray-text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .page-section ul {
+            color: var(--gray-text);
+            line-height: 1.8;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .emphasis {
+            color: var(--light-text);
+            font-weight: 600;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--gray-text);
+            font-style: italic;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--gray-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--light-text);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-content {
+                padding: 6rem 1rem 2rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .page-section {
+                padding: 1.5rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+            z-index: 999;
+        }
+
+        .back-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(102, 126, 234, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">CV APRESIA ADIMATRA</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html#services">Layanan</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#about">Tentang</a></li>
+                <li><a href="index.html#contact">Kontak</a></li>
+                <li><a href="privacy.html">Privasi</a></li>
+                <li><a href="terms.html">Syarat & Ketentuan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <h1 class="page-title fade-in">Terms & Conditions</h1>
+        
+        <div class="page-section fade-in">
+            <h2>Syarat & Ketentuan Layanan <span class="highlight">CV APRESIA ADIMATRA</span></h2>
+            <p>
+                Selamat datang di <span class="highlight">CV APRESIA ADIMATRA</span>. Syarat & Ketentuan ini mengatur penggunaan layanan creative advertising, desain grafis, dan digital marketing yang kami sediakan. Dengan menggunakan layanan kami, Anda menyetujui dan terikat oleh syarat & ketentuan ini.
+            </p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>1. Definisi</h2>
+            <p>Dalam Syarat & Ketentuan ini:</p>
+            <ul>
+                <li><strong>"Kami" / "Perusahaan":</strong> CV APRESIA ADIMATRA, penyedia layanan creative advertising.</li>
+                <li><strong>"Anda" / "Klien":</strong> Individu atau perusahaan yang menggunakan layanan kami.</li>
+                <li><strong>"Layanan":</strong> Semua layanan creative, desain, dan digital marketing yang kami sediakan.</li>
+                <li><strong>"Proyek":</strong> Pekerjaan spesifik yang disepakati antara kami dan Anda.</li>
+                <li><strong>"Hasil Karya":</strong> Semua output creative yang dihasilkan dalam proyek.</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>2. Lingkup Layanan</h2>
+            <p>Layanan kami meliputi namun tidak terbatas pada:</p>
+            <ul>
+                <li>Desain grafis dan branding</li>
+                <li>Digital marketing dan social media management</li>
+                <li>Video production dan editing</li>
+                <li>Web development dan design</li>
+                <li>Brand strategy dan konsultasi kreatif</li>
+                <li>Content creation dan copywriting</li>
+                <li>Media planning dan buying</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>3. Proses Kerjasama</h2>
+            <h3>3.1 Konsultasi Awal</h3>
+            <p>Setiap proyek dimulai dengan konsultasi awal untuk memahami kebutuhan, tujuan, dan ekspektasi Anda.</p>
+
+            <h3>3.2 Proposal dan Penawaran</h3>
+            <p>Kami akan menyediakan proposal tertulis yang mencakup scope of work, timeline, dan biaya proyek.</p>
+
+            <h3>3.3 Perjanjian Kerjasama</h3>
+            <p>Proyek akan dimulai setelah Anda menyetujui proposal dan menandatangani perjanjian kerjasama.</p>
+
+            <h3>3.4 Pelaksanaan Proyek</h3>
+            <p>Kami akan melaksanakan proyek sesuai timeline dan deliverables yang disepakati.</p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>4. Hak dan Kewajiban</h2>
+            <h3>4.1 Hak dan Kewajiban Kami</h3>
+            <p><span class="emphasis">Hak Kami:</span></p>
+            <ul>
+                <li>Menerima pembayaran sesuai dengan yang disepakati</li>
+                <li>Menggunakan hasil karya untuk portfolio (dengan persetujuan klien)</li>
+                <li>Menolak permintaan yang melanggar hukum atau etika</li>
+            </ul>
+            <p><span class="emphasis">Kewajiban Kami:</span></p>
+            <ul>
+                <li>Menyediakan layanan sesuai dengan standar profesional</li>
+                <li>Menjaga kerahasiaan informasi klien</li>
+                <li>Menyelesaikan proyek sesuai timeline</li>
+                <li>Memberikan revisi sesuai dengan kesepakatan</li>
+            </ul>
+
+            <h3>4.2 Hak dan Kewajiban Klien</h3>
+            <p><span class="emphasis">Hak Klien:</span></p>
+            <ul>
+                <li>Menerima hasil karya sesuai dengan spesifikasi</li>
+                <li>Meminta revisi sesuai dengan kesepakatan</li>
+                <li>Mendapatkan ownership atas hasil karya setelah pembayaran lunas</li>
+            </ul>
+            <p><span class="emphasis">Kewajiban Klien:</span></p>
+            <ul>
+                <li>Memberikan informasi yang akurat dan lengkap</li>
+                <li>Melakukan pembayaran tepat waktu</li>
+                <li>Memberikan feedback dan konfirmasi tepat waktu</li>
+                <li>Menyediakan materi yang diperlukan untuk proyek</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>5. Pembayaran</h2>
+            <h3>5.1 Struktur Pembayaran</h3>
+            <ul>
+                <li><strong>Down Payment:</strong> 30-50% dari total biaya proyek</li>
+                <li><strong>Progress Payment:</strong> 30-40% pada milestone tertentu</li>
+                <li><strong>Final Payment:</strong> 20-40% setelah proyek selesai</li>
+            </ul>
+
+            <h3>5.2 Metode Pembayaran</h3>
+            <p>Kami menerima pembayaran melalui:</p>
+            <ul>
+                <li>Transfer bank (BCA, Mandiri, BNI)</li>
+                <li>Virtual account</li>
+                <li>E-wallet (OVO, GoPay, Dana)</li>
+                <li>Cek atau giro (untuk corporate client)</li>
+            </ul>
+
+            <h3>5.3 Keterlambatan Pembayaran</h3>
+            <p>Keterlambatan pembayaran akan dikenakan bunga 2% per bulan dari jumlah yang terhutang.</p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>6. Hak Kekayaan Intelektual</h2>
+            <h3>6.1 Selama Proyek</h3>
+            <p>Selama proses pengerjaan, semua hak kekayaan intelektual atas hasil karya tetap milik <span class="highlight">CV APRESIA ADIMATRA</span>.</p>
+
+            <h3>6.2 Setelah Pelunasan</h3>
+            <p>Setelah pembayaran lunas, hak kekayaan intelektual atas hasil karya beralih kepada klien, kecuali:</p>
+            <ul>
+                <li>Stock photos, fonts, atau assets pihak ketiga yang memiliki lisensi terpisah</li>
+                <li>Tools, templates, atau metodologi internal kami</li>
+                <li>Hasil karya yang belum dibayar lunas</li>
+            </ul>
+
+            <h3>6.3 Portfolio Rights</h3>
+            <p>Kami berhak menampilkan hasil karya dalam portfolio dan materi marketing kami, dengan menyebutkan nama klien (kecuali ada perjanjian khusus).</p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>7. Revisi dan Perubahan</h2>
+            <h3>7.1 Kebijakan Revisi</h3>
+            <ul>
+                <li><strong>Minor Revisions:</strong> 2-3 kali revisi minor included dalam harga</li>
+                <li><strong>Major Revisions:</strong> Akan dikenakan biaya tambahan</li>
+                <li><strong>Perubahan Scope:</strong> Perlu adanya perjanjian addendum</li>
+            </ul>
+
+            <h3>7.2 Proses Revisi</h3>
+            <p>Setiap permintaan revisi harus disampaikan secara tertulis dengan detail yang jelas. Waktu pengerjaan revisi disesuaikan dengan kompleksitas perubahan.</p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>8. Pembatalan dan Penghentian</h2>
+            <h3>8.1 Pembatalan oleh Klien</h3>
+            <ul>
+                <li><strong>Sebelum dimulai:</strong> Down payment tidak dapat dikembalikan</li>
+                <li><strong>Sedang berjalan:</strong> Klien membayar semua pekerjaan yang telah selesai</li>
+                <li><strong>Pembatalan tiba-tiba:</strong> Klien membayar 50% dari sisa biaya proyek</li>
+            </ul>
+
+            <h3>8.2 Penghentian oleh Kami</h3>
+            <p>Kami berhak menghentikan proyek jika:</p>
+            <ul>
+                <li>Klien melanggar syarat & ketentuan</li>
+                <li>Ada kegiatan yang melanggar hukum</li>
+                <li>Klien tidak melakukan pembayaran</li>
+                <li>Terjadi force majeure</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>9. Kerahasiaan</h2>
+            <p>
+                Kami berkomitmen untuk menjaga kerahasiaan semua informasi yang diberikan oleh klien. Informasi rahasia meliputi data bisnis, strategi marketing, informasi finansial, dan semua materi yang belum dipublikasikan.
+            </p>
+            <p>
+                Kewajiban kerahasiaan tetap berlaku setelah proyek selesai, kecuali jika informasi tersebut menjadi public domain atau diwajibkan oleh hukum.
+            </p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>10. Limitasi Tanggung Jawab</h2>
+            <ul>
+                <li>Kami tidak bertanggung jawab atas kerugian tidak langsung atau konsekuensial</li>
+                <li>Maksimal tanggung jawab kami adalah sebesar biaya proyek</li>
+                <li>Kami tidak bertanggung jawab atas kegagalan pihak ketiga (hosting, domain, dll)</li>
+                <li>Kami tidak menjamin hasil spesifik dari campaign marketing</li>
+            </ul>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>11. Force Majeure</h2>
+            <p>
+                Kami tidak bertanggung jawab atas keterlambatan atau kegagalan dalam melaksanakan kewajiban jika disebabkan oleh hal-hal di luar kendali kami, termasuk namun tidak terbatas pada: bencana alam, perang, pemogokan, gangguan internet, atau kebijakan pemerintah.
+            </p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>12. Penyelesaian Sengketa</h2>
+            <p>
+                Semua sengketa yang timbul dari Syarat & Ketentuan ini akan diselesaikan secara musyawarah terlebih dahulu. Jika tidak mencapai kesepakatan, sengketa akan diselesaikan melalui pengadilan di Jakarta Selatan.
+            </p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>13. Perubahan Syarat & Ketentuan</h2>
+            <p>
+                Kami berhak mengubah Syarat & Ketentuan ini sewaktu-waktu. Perubahan akan diberitahukan melalui website atau email. Penggunaan layanan yang berkelanjutan berarti Anda menyetujui perubahan tersebut.
+            </p>
+        </div>
+
+        <div class="page-section fade-in">
+            <h2>14. Kontak Kami</h2>
+            <p>
+                Untuk pertanyaan tentang Syarat & Ketentuan ini, silakan hubungi:
+            </p>
+            <ul>
+                <li><strong>Email:</strong> legal@apresiaadimatra.co.id</li>
+                <li><strong>Telepon:</strong> +62 21 5555 1234</li>
+                <li><strong>Alamat:</strong> Jl. Kreatif No. 123, Jakarta Selatan 12345</li>
+            </ul>
+        </div>
+
+        <div class="last-updated fade-in">
+            <p>Syarat & Ketentuan ini terakhir diperbarui pada: 1 Januari 2024</p>
+        </div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-home">← Kembali ke Beranda</a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#services">Layanan</a>
+                <a href="index.html#portfolio">Portfolio</a>
+                <a href="index.html#about">Tentang</a>
+                <a href="index.html#contact">Kontak</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+            <p>&copy; 2024 CV APRESIA ADIMATRA. All rights reserved. | Creative Advertising Agency</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
